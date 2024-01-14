@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:orientation="vertical"
+    android:id="@+id/ll_container">
+
+    <TextView
+        android:id="@+id/tv_from"
+        android:singleLine="true"
+        android:textSize="14sp"
+        tools:text="email@example.com"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"/>
+
+    <TextView
+        android:id="@+id/tv_subject"
+        android:singleLine="true"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        tools:text="This is the subject of the email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"/>
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:textSize="12sp"
+        android:singleLine="true"
+        tools:text="Et quibusdam nostrum repellendus minus nostrum recusandae. Et dolores sint aut non fuga non veritatis. Doloribus ipsa exercitationem unde eos."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/error"
+    tools:context=".ErrorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:layout_marginHorizontal="14dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:src="@drawable/error"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:layout_marginStart="12dp"
+            android:textSize="24sp"
+            android:textColor="#EEEEEE"
+            android:text="@string/error_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="@drawable/shape_sheet"
+        android:paddingTop="32dp"
+        android:paddingHorizontal="18dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_error_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/error_unspecified"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/tv_error_description"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="18dp"
+                android:lineSpacingMultiplier="1.1"
+                android:text="@string/error_unspecified_description"
+                android:textSize="20sp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/tv_exception"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="java.RuntimeException: I ran into an exception while running haha" />
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_restart"
+            style="@style/Theme.Button.PrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginHorizontal="18dp"
+            android:text="@string/restart_application"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+</LinearLayout>

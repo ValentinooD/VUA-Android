@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_sheet"
+    android:padding="@dimen/sheet_padding"
+    android:orientation="vertical"
+    android:nestedScrollingEnabled="true">
+
+    <TextView
+        android:text="@string/location"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+        <ImageView
+            android:id="@+id/iv_flag"
+            tools:src="@drawable/unknown_flag"
+            android:layout_width="42dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_country"
+            android:textSize="16sp"
+            tools:text="Croatia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/mv_map"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"/>
+
+</LinearLayout>

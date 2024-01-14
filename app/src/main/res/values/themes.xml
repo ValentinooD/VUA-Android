@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.VUA_MobileApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/primary</item>
+    </style>
+
+    <style name="Theme.VUA_MobileApp" parent="Base.Theme.VUA_MobileApp" />
+
+    <style name="Theme.NormalActivity" parent="Base.Theme.VUA_MobileApp">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Theme.SplashStarting" parent="Theme.SplashScreen">
+        <item name="postSplashScreenTheme">@style/Theme.VUA_MobileApp</item>
+        <item name="windowSplashScreenAnimationDuration">500</item>
+    </style>
+    
+    <style name="Theme.Button.PrimaryButton" parent="ThemeOverlay.Material3.Button">
+        <item name="android:textColor">@color/pure_white</item>
+        <item name="android:backgroundTint">@color/primary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/shape_sheet</item>
+    </style>
+</resources>
